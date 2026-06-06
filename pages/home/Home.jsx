@@ -1,11 +1,15 @@
-import React from 'react'
-import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 import axios from 'axios';
 export default function Home() {
-    
-  return
-  <>
-    <h2>Home</h2>
-    </>
 
+  
+
+  return (
+    <>   
+     <h2>Home</h2>
+    </>
+  )
 }
+
+
+
