@@ -2,7 +2,8 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from './MainLayout';
 import Home from './pages/home/Home';
-import User from './src/components/user/User.jsx';
+import Users from './src/components/user/Users.jsx';
+import UserDetails from './src/components/user/UserDetails.jsx';
 const router = createBrowserRouter(
     [
         {
@@ -14,10 +15,13 @@ const router = createBrowserRouter(
                     element:<Home />
                 },
                 {
-                    path: "user",
-                    element:<User />
+                    path: 'users',
+                    element:<Users />
                 },
-                
+                {
+                    path:'user/:id',
+                    element:<UserDetails />
+                }
             ]
 
         },

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 export default function User() {
    const getUsers = async ()=>{
     const response = await axios.get(`https://ums12.runasp.net/api/users`);
@@ -23,6 +23,7 @@ export default function User() {
         
             data.users.map((user)=><div>
                 <h2>{user.name}</h2>
+                <Link to={`/user/${user.id}`}>details</Link>
             </div>)
         }
 
